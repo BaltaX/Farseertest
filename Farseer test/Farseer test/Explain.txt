@@ -1,0 +1,13 @@
+﻿Jag använde tutorial från 
+
+http://roy-t.nl/index.php/2012/08/19/farseer-physics-3-3-1-and-xna/
+
+Jag hämtade Farseer physics från deras hemsida och extraherade filerna, och startade upp den (solution hette Samples XNA) i VS, och så skulle jag göra en release på den. Då högerklickade jag på solutionfilen och valde Configuration Manager. Där kom det upp en ruta där jag kunde välja release för Farseer physics XNA. Därefter valde jag build på projektet som hette Farseer Physics XNA.
+
+Nu hittar man i dess mapp (bin/x86/release) filen FarseerPhysics.dll. Denna la jag i samma mapp som tex Game1.cs låg, och så la jag till en referens till den genom att högerklicka på references och välja Add Reference, och väl där fliken browse, och så valde jag FarseerPhysics.dll.
+
+Därefter kunde jag köra första exemplet genom att ändra koden på 2 ställen:
+
+(1) Vector2 size = new Vector2(150, 150); lades till som medlemsvariabel, istället för att definiera den i Update
+
+(2)Size.X och Size.Y i LoadContent ändrades till size.x och size.y.
